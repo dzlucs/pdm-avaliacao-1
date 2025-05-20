@@ -4,7 +4,6 @@ import { DATA } from "@/assets/data/data";
 import { DATA2 } from "@/assets/data/data2";
 
 export default function DetailsScreen() {
-  // Recupera os parâmetros da rota
   const { id, type } = useLocalSearchParams<{ id: string; type?: string }>();
 
   // Decide qual lista usar

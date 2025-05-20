@@ -33,7 +33,7 @@ export const DATA: ItemData[] = [
   },
   {
     id: "5",
-    title: "Depoly-ing",
+    title: "Deploy-ing",
     emoji: "https://em-content.zobj.net/source/apple/419/rocket_1f680.png",
     description: "Publish it to prod.",
   },

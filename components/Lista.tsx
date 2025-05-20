@@ -21,10 +21,9 @@ const Lista = ({ data, type }: ListaProps) => {
     }
   }, [selectedId]);
 
-  // Função para abrir o ActionSheet com opções
   const handleOpenActions = (item: ItemData) => {
-    const options = ["Editar", "Excluir", "Cancelar"];
-    const cancelButtonIndex = 2; // Índice da opção "Cancelar"
+    const options = ["Favoritar", "Excluir", "Cancelar"];
+    const cancelButtonIndex = 2;
 
     showActionSheetWithOptions(
       {
@@ -34,7 +33,7 @@ const Lista = ({ data, type }: ListaProps) => {
       },
       (buttonIndex) => {
         if (buttonIndex === 0) {
-          console.log("Editar", item.id);
+          console.log("Favoritar", item.id);
         } else if (buttonIndex === 1) {
           console.log("Excluir", item.id);
         }

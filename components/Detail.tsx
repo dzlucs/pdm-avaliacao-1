@@ -6,7 +6,6 @@ import { DATA2 } from "@/assets/data/data2";
 export default function DetailsScreen() {
   const { id, type } = useLocalSearchParams<{ id: string; type?: string }>();
 
-  // Escolha o dataset correto
   const data = type === "dev" ? DATA2 : DATA;
   const item = data.find((i) => i.id === id);
 
