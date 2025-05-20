@@ -9,13 +9,16 @@
 ## Aplicativo
 
 Index Screen
+
 ![](./assets/images/print1.png)
 
 Developer Screen
+
 ![](./assets/images/print2.png)
 ![](./assets/images/print3.png)
 
 Student Screen
+
 ![](./assets/images/print4.png)
 ![](./assets/images/print5.png)
 
