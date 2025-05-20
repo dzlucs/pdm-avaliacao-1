@@ -1,27 +1,11 @@
-import { StyleSheet, Text, View } from "react-native";
+import { View } from "react-native";
+import { DATA2 } from "@/assets/data/data2";
+import Lista from "@/components/Lista";
 
-export default function TabTwoScreen() {
+export default function HomeScreen() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Tab Two</Text>
-      <View style={styles.separator} />
+    <View style={{ flex: 1 }}>
+      <Lista data={DATA2} />
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: "bold",
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: "80%",
-  },
-});

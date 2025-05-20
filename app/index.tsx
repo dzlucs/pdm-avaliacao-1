@@ -1,34 +1,53 @@
-import { StyleSheet, Button, TouchableOpacity, Text, View } from "react-native";
+import {
+  ImageBackground,
+  StyleSheet,
+  Button,
+  TouchableOpacity,
+  Text,
+  View,
+} from "react-native";
 import { useRouter } from "expo-router";
+import { useState } from "react";
 
 export default function TabOneScreen() {
   const router = useRouter();
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Seja bem vindo(a)</Text>
+    <ImageBackground
+      source={require("../assets/images/tech-light.jpg")} // Coloque sua imagem na pasta assets
+      style={styles.background}
+      resizeMode="cover"
+    >
+      <View style={styles.container}>
+        <Text style={styles.title}>Welcome</Text>
 
-      {/*       <View style={styles.separator} lightColor="lightgreen" />
-       */}
+        <TouchableOpacity
+          style={styles.button1}
+          onPress={
+            () => router.push("/two")
+            /* useState aqui */
+          }
+        >
+          <Text style={styles.text}>Developer</Text>
+        </TouchableOpacity>
 
-      <TouchableOpacity
-        style={styles.button1}
-        onPress={() => router.push("/two")}
-      >
-        <Text style={styles.text}>SOU DEV</Text>
-      </TouchableOpacity>
-
-      <TouchableOpacity
-        style={styles.button2}
-        onPress={() => router.push("/three")}
-      >
-        <Text style={styles.text}>SOU ESTUDANTE</Text>
-      </TouchableOpacity>
-    </View>
+        <TouchableOpacity
+          style={styles.button2}
+          onPress={() => router.push("/three")}
+        >
+          <Text style={styles.text}>Student</Text>
+        </TouchableOpacity>
+      </View>
+    </ImageBackground>
   );
 }
 
 const styles = StyleSheet.create({
+  background: {
+    flex: 1,
+    width: "100%",
+    height: "100%",
+  },
   container: {
     flex: 1,
     alignItems: "center",

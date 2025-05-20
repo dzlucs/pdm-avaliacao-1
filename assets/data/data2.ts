@@ -1,11 +1,11 @@
-export type ItemData = {
+export type ItemData2 = {
   id: string;
   title: string;
   emoji: string;
   description?: string;
 };
 
-export const DATA: ItemData[] = [
+export const DATA2: ItemData2[] = [
   {
     id: "1",
     title: "Coding interviews",

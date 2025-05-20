@@ -7,26 +7,22 @@ import {
   View,
   Image,
 } from "react-native";
-import { useActionSheet } from "@expo/react-native-action-sheet"; // Importando o useActionSheet
+import { useActionSheet } from "@expo/react-native-action-sheet";
 import { ItemData } from "@/assets/data/data";
-// Importando os dados
-// Se você estiver usando o Menu do react-native-paper, adicione também o Provider aqui
-// import { Menu, Provider } from 'react-native-paper'; // Se preferir usar o Menu
 
 type ListaProps = {
   data: ItemData[];
 };
 
 const Lista = ({ data }: ListaProps) => {
-  const [selectedId, setSelectedId] = useState<string | null>(null); // Estado para o item selecionado
-  const { showActionSheetWithOptions } = useActionSheet(); // Hook do ActionSheet
+  const [selectedId, setSelectedId] = useState<string | null>(null);
+  const { showActionSheetWithOptions } = useActionSheet();
 
   // Função para abrir o ActionSheet com opções
   const handleOpenActions = (item: ItemData) => {
-    const options = ["Editar", "Excluir", "Cancelar"]; // Opções de ações
+    const options = ["Editar", "Excluir", "Cancelar"];
     const cancelButtonIndex = 2; // Índice da opção "Cancelar"
 
-    // Exibindo o ActionSheet com as opções
     showActionSheetWithOptions(
       {
         options,
@@ -69,7 +65,7 @@ const Lista = ({ data }: ListaProps) => {
             style={styles.actionButton}
             onPress={() => handleOpenActions(item)} // Abrir as opções ao clicar
           >
-            <Text style={styles.actionButtonText}>•••</Text>
+            <Text style={styles.actionButtonText}>⚙️</Text>
           </TouchableOpacity>
         </View>
       </TouchableOpacity>
