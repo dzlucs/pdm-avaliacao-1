@@ -1,17 +1,20 @@
 import { ActionSheetProvider } from "@expo/react-native-action-sheet";
 import { Stack } from "expo-router";
-import { StyleSheet } from "react-native";
+import { StyleSheet, View } from "react-native";
 
 export default function _layout() {
   return (
     <ActionSheetProvider>
-      <Stack></Stack>
+      <View style={styles.container}>
+        <Stack />
+      </View>
     </ActionSheetProvider>
   );
 }
 
 const styles = StyleSheet.create({
-  stack: {
-    color: "#456123",
+  container: {
+    flex: 1,
+    backgroundColor: "#aabbcc",
   },
 });

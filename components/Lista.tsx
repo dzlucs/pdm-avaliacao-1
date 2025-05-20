@@ -1,14 +1,8 @@
 import React, { useState } from "react";
-import {
-  FlatList,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-  Image,
-} from "react-native";
+import { FlatList, StyleSheet } from "react-native";
 import { useActionSheet } from "@expo/react-native-action-sheet";
 import { ItemData } from "@/assets/data/data";
+import ItemLista from "./ItemLista";
 
 type ListaProps = {
   data: ItemData[];
@@ -41,42 +35,18 @@ const Lista = ({ data }: ListaProps) => {
     );
   };
 
-  // Renderiza cada item da lista
-  const renderItem = ({ item }: { item: ItemData }) => {
-    const isSelected = item.id === selectedId;
-    const backgroundColor = isSelected ? "#456123" : "#6EEB83";
-    const textColor = isSelected ? "#fff" : "#333";
-
-    return (
-      <TouchableOpacity
-        style={[styles.itemContainer, { backgroundColor }]}
-        onPress={() => setSelectedId(item.id)} // Marcar item como selecionado ao clicar
-      >
-        <Image source={{ uri: item.emoji }} style={styles.emoji} />{" "}
-        {/* Ícone ou emoji do item */}
-        <View style={styles.content}>
-          <Text style={[styles.title, { color: textColor }]}>{item.title}</Text>
-          <Text style={[styles.description, { color: textColor }]}>
-            {item.description}
-          </Text>
-
-          {/* Botão para abrir as ações do ActionSheet */}
-          <TouchableOpacity
-            style={styles.actionButton}
-            onPress={() => handleOpenActions(item)} // Abrir as opções ao clicar
-          >
-            <Text style={styles.actionButtonText}>⚙️</Text>
-          </TouchableOpacity>
-        </View>
-      </TouchableOpacity>
-    );
-  };
-
   return (
     <FlatList
       data={data}
-      renderItem={renderItem}
       keyExtractor={(item) => item.id}
+      renderItem={({ item }) => (
+        <ItemLista
+          item={item}
+          isSelected={item.id === selectedId}
+          onPress={() => setSelectedId(item.id)}
+          onOpenActions={() => handleOpenActions(item)}
+        />
+      )}
     />
   );
 };

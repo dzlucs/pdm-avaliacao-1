@@ -1,36 +1,30 @@
 import {
   ImageBackground,
   StyleSheet,
-  Button,
   TouchableOpacity,
   Text,
   View,
 } from "react-native";
 import { useRouter } from "expo-router";
-import { useState } from "react";
 
 export default function TabOneScreen() {
   const router = useRouter();
 
   return (
     <ImageBackground
-      source={require("../assets/images/tech-light.jpg")} // Coloque sua imagem na pasta assets
+      source={require("../assets/images/tech-light.jpg")}
       style={styles.background}
       resizeMode="cover"
     >
+      <View style={styles.overlay} />
       <View style={styles.container}>
         <Text style={styles.title}>Welcome</Text>
-
         <TouchableOpacity
           style={styles.button1}
-          onPress={
-            () => router.push("/two")
-            /* useState aqui */
-          }
+          onPress={() => router.push("/two")}
         >
           <Text style={styles.text}>Developer</Text>
         </TouchableOpacity>
-
         <TouchableOpacity
           style={styles.button2}
           onPress={() => router.push("/three")}
@@ -48,7 +42,12 @@ const styles = StyleSheet.create({
     width: "100%",
     height: "100%",
   },
+  overlay: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: "rgba(0,0,0,0.5)",
+  },
   container: {
+    zIndex: 1, // para garantir que o conteúdo que acima do overlay
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
@@ -56,6 +55,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 20,
     fontWeight: "bold",
+    color: "white",
   },
   separator: {
     marginVertical: 30,
