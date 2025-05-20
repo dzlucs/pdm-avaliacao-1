@@ -1,16 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FlatList, StyleSheet } from "react-native";
 import { useActionSheet } from "@expo/react-native-action-sheet";
 import { ItemData } from "@/assets/data/data";
 import ItemLista from "./ItemLista";
+import { useRouter } from "expo-router";
 
 type ListaProps = {
   data: ItemData[];
+  type?: string;
 };
 
-const Lista = ({ data }: ListaProps) => {
+const Lista = ({ data, type }: ListaProps) => {
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const { showActionSheetWithOptions } = useActionSheet();
+  const router = useRouter();
+
+  useEffect(() => {
+    if (selectedId) {
+      console.log("Novo item selecionado:", selectedId);
+    }
+  }, [selectedId]);
 
   // Função para abrir o ActionSheet com opções
   const handleOpenActions = (item: ItemData) => {
@@ -21,14 +30,12 @@ const Lista = ({ data }: ListaProps) => {
       {
         options,
         cancelButtonIndex,
-        title: item.title, // Título do item
+        title: item.title,
       },
       (buttonIndex) => {
         if (buttonIndex === 0) {
-          // Ação de Editar
           console.log("Editar", item.id);
         } else if (buttonIndex === 1) {
-          // Ação de Excluir
           console.log("Excluir", item.id);
         }
       }
@@ -43,6 +50,9 @@ const Lista = ({ data }: ListaProps) => {
         <ItemLista
           item={item}
           isSelected={item.id === selectedId}
+          /* onPress={() =>
+            router.push({ pathname: "/details/[id]", params: { id: item.id } })
+          } */
           onPress={() => setSelectedId(item.id)}
           onOpenActions={() => handleOpenActions(item)}
         />

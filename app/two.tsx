@@ -8,7 +8,7 @@ export default function HomeScreen() {
   return (
     <View style={{ flex: 1, backgroundColor: "#F9DC5C" }}>
       <Stack.Screen name="two" options={{ title: "Developer" }} />{" "}
-      <Lista data={DATA2} />
+      <Lista data={DATA2} type="dev" />
     </View>
   );
 }

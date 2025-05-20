@@ -1,64 +1,77 @@
-# 📱 Nome do seu App
+# Dev-ify
 
-> O aplicativo funciona como um.
->
-> Exemplo: “Um aplicativo para controle de hábitos diários, permitindo que o usuário registre, visualize e acompanhe o progresso de suas metas.”
-
----
-
-## 🖼️ Telas do Aplicativo
-
-Insira prints das principais telas do seu app aqui. Você pode fazer upload das imagens na pasta `assets` do repositório e referenciá-las:
-
-| Tela Inicial            | Tela de Detalhes        | Tela de Listagem        |
-| ----------------------- | ----------------------- | ----------------------- |
-| ![](./assets/tela1.png) | ![](./assets/tela2.png) | ![](./assets/tela3.png) |
+> A ideia inicial era criar um app/uma rede social para compartilhamento de informações de devs profissionais e estudantes, para facilitar networking.
+> O obtido (até o momento) é meramente uma ilustração do que pode vir a se tornar.
+> Realmente acredito que é uma ideia interessante que pode ser melhor desenvolvida futuramente.
 
 ---
 
-## 🚀 Como Executar o Projeto
+## Aplicativo
 
-Siga os passos abaixo para rodar o app localmente:
+Index Screen
+![](./assets/images/print1.png)
 
-1. **Clone o repositório:**
+Developer Screen
+![](./assets/images/print2.png)
+![](./assets/images/print3.png)
+
+Student Screen
+![](./assets/images/print4.png)
+![](./assets/images/print5.png)
+
+---
+
+## Como rodar o projeto
+
+### Pré-requisitos
+
+- [Node.js](https://nodejs.org/) (versão 18 ou superior)
+- [Expo CLI](https://docs.expo.dev/get-started/installation/)
+- Um gerenciador de pacotes, como [npm](https://www.npmjs.com/) ou [yarn](https://yarnpkg.com/)
+
+---
+
+### Passo a passo
+
+1. **Clone o repositório**
 
    ```bash
-   git clone https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git
-   cd SEU_REPOSITORIO
+   git clone https://github.com/dzlucs/pdm-avaliacao-1.git
+   cd pdm-avaliacao-1
    ```
 
-2. **Instale as dependências:**
+2. **Instale as dependências**
 
    ```bash
    npm install
-   # ou
+   ```
+
+   ou, se preferir:
+
+   ```bash
    yarn
    ```
 
-3. **Execute o projeto:**
+3. **Inicie o servidor de desenvolvimento Expo**
 
    ```bash
    npx expo start
-   # ou
-   expo start
    ```
 
-4. **Abra no seu dispositivo físico ou emulador usando o app Expo Go.**
+4. **Execute o app:**
+   - Abra o app [Expo Go](https://expo.dev/client) no seu celular Android/iOS.
+   - Escaneie o QR Code que aparecerá no terminal ou navegador.
+   - Ou, se estiver em um emulador/simulador, escolha a opção correspondente no menu do Expo.
 
 ---
 
-## 📋 Funcionalidades
+### Observações
 
-- [x] Navegação entre 3 ou mais telas usando Expo Router
-- [x] Componentes React com props, estado interno e uso de useEffect
-- [x] Aplicação de estilos com StyleSheet e design system personalizado
-- [x] Tela de listagem usando FlatList ou SectionList
-- [x] Uso de ActionSheet
-- [x] (Outros: Adicione aqui diferenciais do seu app)
+- Para rodar em um emulador Android, é necessário ter o Android Studio instalado e configurado.
+- Alterações no código são refletidas automaticamente no app em tempo real.
+- Para instalar o Expo CLI globalmente (opcional):
+  ```bash
+  npm install -g expo-cli
+  ```
 
 ---
-
-## 🧑‍💻 Autor
-
-- **Lucas Dziurza**  
-  [GitHub](https://github.com/dzlucs)
