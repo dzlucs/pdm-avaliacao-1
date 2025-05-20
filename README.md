@@ -10,17 +10,19 @@
 
 Index Screen
 
-![](./assets/images/print1.png)
+![](./assets/images/print1.jpeg)
 
 Developer Screen
 
-![](./assets/images/print2.png)
-![](./assets/images/print3.png)
+![](./assets/images/print2.jpeg)
+![](./assets/images/print3.jpeg)
+![](./assets/images/print4.jpeg)
 
 Student Screen
 
-![](./assets/images/print4.png)
-![](./assets/images/print5.png)
+![](./assets/images/print5.jpeg)
+![](./assets/images/print6.jpeg)
+![](./assets/images/print7.jpeg)
 
 ---
 
