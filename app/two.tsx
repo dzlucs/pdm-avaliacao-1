@@ -1,5 +1,5 @@
 import { View, Text } from "react-native";
-import { DATA2 } from "@/assets/data/data2";
+import { DATA2 } from "@/data/data2";
 import Lista from "@/components/Lista";
 import { StyleSheet } from "react-native";
 import { Stack } from "expo-router";

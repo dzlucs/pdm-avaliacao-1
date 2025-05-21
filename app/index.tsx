@@ -19,10 +19,7 @@ export default function TabOneScreen() {
       <View style={styles.overlay} />
       <View style={styles.container}>
         <Text style={styles.title}>Welcome</Text>
-        <TouchableOpacity
-          style={styles.button1}
-          onPress={() => router.push("/two")}
-        >
+        <TouchableOpacity style={styles.button1} onPress={() => sh("/two")}>
           <Text style={styles.text}>Developer</Text>
         </TouchableOpacity>
         <TouchableOpacity

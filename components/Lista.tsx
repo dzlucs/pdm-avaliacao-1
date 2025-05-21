@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FlatList, StyleSheet } from "react-native";
 import { useActionSheet } from "@expo/react-native-action-sheet";
-import { ItemData } from "@/assets/data/data";
+import { ItemData } from "@/data/data";
 import ItemLista from "./ItemLista";
 import { useRouter } from "expo-router";
 
@@ -52,7 +52,10 @@ const Lista = ({ data, type }: ListaProps) => {
           /* onPress={() =>
             router.push({ pathname: "/details/[id]", params: { id: item.id } })
           } */
-          onPress={() => setSelectedId(item.id)}
+          onPress={() => {
+            console.log("Item clicado:", item.id);
+            setSelectedId(item.id);
+          }}
           onOpenActions={() => handleOpenActions(item)}
         />
       )}

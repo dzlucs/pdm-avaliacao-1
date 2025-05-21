@@ -1,7 +1,6 @@
-// components/ItemLista.tsx
 import React from "react";
 import { View, Text, Image, TouchableOpacity, StyleSheet } from "react-native";
-import { ItemData } from "@/assets/data/data";
+import { ItemData } from "@/data/data";
 
 type ItemListaProps = {
   item: ItemData;
@@ -30,7 +29,11 @@ const ItemLista: React.FC<ItemListaProps> = ({
         <Text style={[styles.description, { color: textColor }]}>
           {item.description}
         </Text>
-        <TouchableOpacity style={styles.actionButton} onPress={onOpenActions}>
+        <TouchableOpacity
+          style={styles.actionButton}
+          onPress={onOpenActions}
+          onPressOut={(e) => e.stopPropagation()}
+        >
           <Text style={styles.actionButtonText}>⚙️</Text>
         </TouchableOpacity>
       </View>

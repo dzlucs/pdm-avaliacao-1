@@ -1,7 +1,7 @@
 import { useLocalSearchParams } from "expo-router";
 import { View, Text, StyleSheet, Image } from "react-native";
-import { DATA } from "@/assets/data/data";
-import { DATA2 } from "@/assets/data/data2";
+import { DATA } from "@/data/data";
+import { DATA2 } from "@/data/data2";
 
 export default function DetailsScreen() {
   const { id, type } = useLocalSearchParams<{ id: string; type?: string }>();
