@@ -6,6 +6,8 @@ import {
   View,
 } from "react-native";
 import { useRouter } from "expo-router";
+//import { HeaderWithHeart } from "@/components/HeaderWithHeart";
+//import { allItems } from "@/data/data";
 
 export default function TabOneScreen() {
   const router = useRouter();
@@ -19,7 +21,10 @@ export default function TabOneScreen() {
       <View style={styles.overlay} />
       <View style={styles.container}>
         <Text style={styles.title}>Welcome</Text>
-        <TouchableOpacity style={styles.button1} onPress={() => sh("/two")}>
+        <TouchableOpacity
+          style={styles.button1}
+          onPress={() => router.push("/two")}
+        >
           <Text style={styles.text}>Developer</Text>
         </TouchableOpacity>
         <TouchableOpacity

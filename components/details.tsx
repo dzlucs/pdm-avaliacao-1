@@ -1,4 +1,28 @@
-import { useLocalSearchParams } from "expo-router";
+import React from "react";
+import { View, Text } from "react-native";
+import { useRoute, RouteProp } from "@react-navigation/native";
+
+type RootStackParamList = {
+  Detalhes: { id: string; nome: string };
+};
+
+type DetalhesRouteProp = RouteProp<RootStackParamList, "Detalhes">;
+
+const Detalhes: React.FC = () => {
+  const route = useRoute<DetalhesRouteProp>();
+  const { id, nome } = route.params;
+
+  return (
+    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+      <Text>ID: {id}</Text>
+      <Text>Nome: {nome}</Text>
+    </View>
+  );
+};
+
+export default Detalhes;
+
+/* import { useLocalSearchParams } from "expo-router";
 import { View, Text, StyleSheet } from "react-native";
 import { DATA } from "@/data/data";
 import { DATA2 } from "@/data/data2";
@@ -28,3 +52,4 @@ const styles = StyleSheet.create({
   },
   title: { fontSize: 22, fontWeight: "bold", marginBottom: 12 },
 });
+ */
