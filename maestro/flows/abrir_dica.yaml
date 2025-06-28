@@ -1,0 +1,6 @@
+appId: host.exp.exponent
+---
+- launchApp
+- tapOn: "Dicas"
+- tapOn: "Remember to update the README"
+- assertVisible: "Write ir very clearly can be really helpful!"

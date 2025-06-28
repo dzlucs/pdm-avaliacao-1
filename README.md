@@ -79,4 +79,52 @@ Student Screen
   npm install -g expo-cli
   ```
 
+# AVALIAÇÃO 2
+
+## Testes Automatizados em Aplicações Mobile
+
+### Diferença entre Testes Unitários e Testes E2E
+
+**Testes unitários** são responsáveis por validar partes isoladas do código, como funções, hooks ou componentes individuais, sem dependências externas. Eles garantem que cada unidade do sistema funcione de forma correta e independente. Em aplicações mobile com React Native/Expo, por exemplo, podemos testar um componente visualmente ou um hook customizado de lógica.
+
+**Testes E2E (End-to-End)** simulam o uso real do aplicativo, validando fluxos completos de usuário e a integração entre diferentes partes do sistema. Eles são executados em dispositivos reais ou emuladores e interagem com a interface do app, validando desde os inputs do usuário até a resposta visual. O objetivo é garantir que todos os componentes funcionem corretamente juntos.
+
+> Referências:
+>
+> - https://docs.expo.dev/develop/unit-testing/
+> - https://maestro.mobile.dev/
+
+## Como rodar os testes
+
+### Testes Unitários
+
+1. Instale as dependências:
+
+   ```bash
+   npm install
+   ```
+
+2. Execute os testes unitários:
+   ```bash
+   npm test
+   ```
+
+Testes unitários podem ser rodados em qualquer ambiente, pois rodam no Node.js com Jest.
+
+### Testes E2E (End-to-End)
+
+1. Instale o Maestro:
+   [Instruções oficiais](https://maestro.mobile.dev/getting-started/installation/)
+
+Realizar 2x o comando abaixo:
+
+```
+curl -fsSL "https://get.maestro.mobile.dev" | bash
+```
+
+2. Execute um fluxo de teste (exemplo):
+   ```bash
+   maestro test maestro/flows/login_flow.yaml
+   ```
+
 ---

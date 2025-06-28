@@ -6,7 +6,7 @@ export default function DetailsScreen() {
 
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>Detalhes do item com id: {id}</Text>
+      <Text>Id: {id}</Text>
     </View>
   );
 }

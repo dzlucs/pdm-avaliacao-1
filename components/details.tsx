@@ -11,7 +11,9 @@ type DetalhesRouteProp = RouteProp<RootStackParamList, "Detalhes">;
 const Detalhes: React.FC = () => {
   const route = useRoute<DetalhesRouteProp>();
   const { id, nome } = route.params;
-
+  //use localseachparams
+  //useglobalsearchparams
+  //aqui tnto faz
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
       <Text>ID: {id}</Text>
