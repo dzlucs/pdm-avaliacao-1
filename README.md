@@ -101,6 +101,10 @@ Student Screen
 1. Instale as dependências:
 
    ```bash
+   npm install --save-dev @testing-library/react-native jest
+   ```
+
+   ```bash
    npm install
    ```
 
@@ -126,5 +130,41 @@ curl -fsSL "https://get.maestro.mobile.dev" | bash
    ```bash
    maestro test maestro/flows/login_flow.yaml
    ```
+
+INSTALE CYPRESS
+
+```
+npm install cypress --save-dev
+```
+
+ou
+
+```
+yarn add cypress --dev
+```
+
+Abra o Cypress
+
+```
+npx cypress open
+```
+
+Na interface gráfica do Cypress é possível criar e rodar os testes
+Criar estrutura de arquivos
+cypress/e2e/
+
+crie o teste
+
+para rodar com interface gráfica:
+
+```
+npx cypress open
+```
+
+para rodar sem interface (modo headless)
+
+```
+npx cypress run
+```
 
 ---

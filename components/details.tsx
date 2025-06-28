@@ -3,21 +3,21 @@ import { View, Text } from "react-native";
 import { useRoute, RouteProp } from "@react-navigation/native";
 
 type RootStackParamList = {
-  Detalhes: { id: string; nome: string };
+  Detalhes: { id: string; name: string };
 };
 
 type DetalhesRouteProp = RouteProp<RootStackParamList, "Detalhes">;
 
 const Detalhes: React.FC = () => {
   const route = useRoute<DetalhesRouteProp>();
-  const { id, nome } = route.params;
+  const { id, name } = route.params;
   //use localseachparams
   //useglobalsearchparams
   //aqui tnto faz
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
       <Text>ID: {id}</Text>
-      <Text>Nome: {nome}</Text>
+      <Text>Name: {name}</Text>
     </View>
   );
 };
