@@ -1,17 +1,16 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
+    "target": "esnext",
+    "module": "node16", //add
+    "esModuleInterop": true, //add
+    "skipLibCheck": true, //add
+    "forceConsistentCasingInFileNames": true, //add
+    "moduleResolution": "node16", //add
     "strict": true,
     "paths": {
-      "@/*": [
-        "./*"
-      ]
+      "@/*": ["./*"]
     }
   },
-  "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    ".expo/types/**/*.ts",
-    "expo-env.d.ts"
-  ]
+  "include": ["**/*.ts", "**/*.tsx", ".expo/types/**/*.ts", "expo-env.d.ts"]
 }
