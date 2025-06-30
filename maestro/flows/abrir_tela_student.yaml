@@ -1,5 +1,0 @@
-appId: host.exp.exponent
----
-- launchApp
-- tapOn: "Student"
-- assertVisible: "Lista de Estudantes"

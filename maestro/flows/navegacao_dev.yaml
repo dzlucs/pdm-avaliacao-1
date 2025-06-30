@@ -1,7 +1,0 @@
-appId: host.exp.exponent
----
-- launchApp
-- tapOn: "Developer"
-- assertVisible: "Perfil do Desenvolvedor"
-- tapOn: "Voltar"
-- assertVisible: "Index" # ou o nome da sua tela inicial
