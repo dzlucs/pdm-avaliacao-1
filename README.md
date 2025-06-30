@@ -113,61 +113,22 @@ Frequentemente simula a experiência do usuário final, mas realizada em um ambi
 
 2. Execute os testes unitários:
    ```bash
-   npm test
+   npx jest components/__tests__/
    ```
 
 Testes unitários podem ser rodados em qualquer ambiente, pois rodam no Node.js com Jest.
 
 ### Testes E2E (End-to-End)
 
-1. Instale o Maestro:
-   [Instruções oficiais](https://maestro.mobile.dev/getting-started/installation/)
-
-Realizar 2x o comando abaixo:
+1. Instale o Playwright:
 
 ```
-curl -fsSL "https://get.maestro.mobile.dev" | bash
+yarn add --dev @playwright/test
 ```
 
 2. Execute um fluxo de teste (exemplo):
    ```bash
-   maestro test maestro/flows/login_flow.yaml
+   yarn e2e
    ```
-
-INSTALE CYPRESS
-
-```
-npm install cypress --save-dev
-```
-
-ou
-
-```
-yarn add cypress --dev
-```
-
-Abra o Cypress
-
-```
-npx cypress open
-```
-
-Na interface gráfica do Cypress é possível criar e rodar os testes
-Criar estrutura de arquivos
-cypress/e2e/
-
-crie o teste
-
-para rodar com interface gráfica:
-
-```
-npx cypress open
-```
-
-para rodar sem interface (modo headless)
-
-```
-npx cypress run
-```
 
 ---

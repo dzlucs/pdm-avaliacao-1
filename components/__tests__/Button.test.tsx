@@ -16,7 +16,7 @@ describe("Button", () => {
     const button = getByText("Clique aqui");
     expect(button).toBeDefined(); // verifica se o texto está na tela
     fireEvent.press(button);
-    expect(onPressMock).toHaveBeenCalledTImes(1); // verifica se, ao clicar, o handler é chamado
+    expect(onPressMock).toHaveBeenCalledTimes(1); // verifica se, ao clicar, o handler é chamado
   });
 });
 
