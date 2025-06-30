@@ -6,6 +6,7 @@ import {
   View,
 } from "react-native";
 import { useRouter } from "expo-router";
+import Button from "../components/Button";
 //import { HeaderWithHeart } from "@/components/HeaderWithHeart";
 //import { allItems } from "@/data/data";
 
@@ -32,6 +33,18 @@ export default function TabOneScreen() {
           onPress={() => router.push("/three")}
         >
           <Text style={styles.text}>Student</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.button2}
+          onPress={() => router.push("/StudentRegister")}
+        >
+          <Text style={styles.text}>Cadastrar Estudante</Text>
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <Button
+            title="Clique aqui"
+            onPress={() => alert("Botão pressionado!")}
+          />
         </TouchableOpacity>
       </View>
     </ImageBackground>

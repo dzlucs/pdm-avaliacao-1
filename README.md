@@ -85,14 +85,17 @@ Student Screen
 
 ### Diferença entre Testes Unitários e Testes E2E
 
-**Testes unitários** são responsáveis por validar partes isoladas do código, como funções, hooks ou componentes individuais, sem dependências externas. Eles garantem que cada unidade do sistema funcione de forma correta e independente. Em aplicações mobile com React Native/Expo, por exemplo, podemos testar um componente visualmente ou um hook customizado de lógica.
+**Testes unitários** são responsáveis por validar partes isoladas do código, como funções, hooks ou componentes individuais, sem dependências externas. Eles garantem que cada unidade do sistema funcione de forma correta e independente. Em aplicações mobile com React Native/Expo, por exemplo, pode-se testar um componente visualmente ou um hook customizado de lógica.
+São realizados de forma muito próxima ao código fonte e de forma isolada, pois visam a qualidade individual.
 
-**Testes E2E (End-to-End)** simulam o uso real do aplicativo, validando fluxos completos de usuário e a integração entre diferentes partes do sistema. Eles são executados em dispositivos reais ou emuladores e interagem com a interface do app, validando desde os inputs do usuário até a resposta visual. O objetivo é garantir que todos os componentes funcionem corretamente juntos.
+**Testes E2E (End-to-End)** também chamado de teste de ponta a ponta, simulam o uso real do aplicativo, validando fluxos completos de usuário e a integração entre diferentes partes do sistema. Eles são executados em dispositivos reais ou emuladores e interagem com a interface do app, validando desde os inputs do usuário até a resposta visual. O objetivo é garantir que todos os componentes funcionem corretamente juntos.
+Frequentemente simula a experiência do usuário final, mas realizada em um ambiente semelhante ao de produção.
 
 > Referências:
 >
 > - https://docs.expo.dev/develop/unit-testing/
 > - https://maestro.mobile.dev/
+> - https://www.alura.com.br/artigos/tipos-de-testes-principais-por-que-utiliza-los?srsltid=AfmBOop_bHvkZDrwEg44E-IhE8y0TVwqUoVdbDtyfaPfvovWnJB89dRc
 
 ## Como rodar os testes
 

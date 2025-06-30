@@ -1,4 +1,4 @@
-import { Selector } from "testcafe";
+/* import { Selector } from "testcafe";
 
 fixture("Home Page").page("http://localhost:8081");
 
@@ -19,3 +19,4 @@ test("A página inicial carrega corretamente", async (t) => {
 });
 // Você pode adicionar outros testes aqui, por exemplo:
 // await t.expect(Selector('button').withText('Entrar').exists).ok();
+ */

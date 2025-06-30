@@ -5,13 +5,13 @@ import { FavoritosProvider } from "@/context/FavoritosContext";
 
 export default function _layout() {
   return (
-    <FavoritosProvider>
-      <ActionSheetProvider>
-        <View style={styles.container}>
-          <Stack />
-        </View>
-      </ActionSheetProvider>
-    </FavoritosProvider>
+    <Stack>
+      <FavoritosProvider>
+        <ActionSheetProvider>
+          <View style={styles.container}>{/* <Stack /> */}</View>
+        </ActionSheetProvider>
+      </FavoritosProvider>
+    </Stack>
   );
 }
 
